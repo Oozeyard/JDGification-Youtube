@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "JDGification Youtube",
+    "description": "Ajoute JDG dans les miniatures Youtube",
+    "version": "1",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "host_permissions": [
+        "https://www.youtube.com/*"
+    ],
+    "content_scripts": [{
+        "matches": ["https://www.youtube.com/*"],
+        "js": ["JDGification.js"],
+        "run_at": "document_idle"
+    }],
+    "web_accessible_resources": [{
+        "resources": [
+            "images/*.png"
+        ],
+        "matches": [
+            "*://*/*"
+        ]
+    }]
+
+}
