@@ -34,11 +34,7 @@ function GetJDG() {
     // Choisis un JDG aléatoire
     let index = Math.floor(Math.random() * number+1);
     let Result = GetPath(index); // Création du lien vers l'image
-
-    if (typeof browser === "undefined") {
-        return chrome.runtime.getURL(Result); // Google
-    }
-    return browser.extension.getURL(Result); // Autre
+    return browser.runtime.getURL(Result);
 }
 
 // Récupère le lien vers l'image
