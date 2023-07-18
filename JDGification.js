@@ -40,7 +40,7 @@ function GetJDG() {
 // Récupère le lien vers l'image
 function GetPath(index) {
     if (alt.includes(index)) { // Version alt
-        let x = Math.random
+        let x = Math.random()
         if (x > 0.5) return ("images/JDG" + index + "alt.png");
     }
     return ("images/JDG" + index + ".png")
